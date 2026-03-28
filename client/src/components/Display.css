@@ -1,0 +1,157 @@
+.display-container {
+    text-align: center;
+    margin-top: 40px;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.5em;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    margin-bottom: 20px;
+}
+
+.notification-display {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.2em;
+    color: #00ffcc;
+    background: rgba(0, 255, 204, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+    }
+    to {
+        box-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+    }
+}
+
+.address {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.1em;
+    display: block;
+    margin: 20px auto;
+    height: 45px;
+    width: 350px;
+    text-align: center;
+    background-color: #212121;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.address:focus {
+    border-color: cyan;
+    box-shadow: 0 0 12px cyan;
+}
+
+.dataButton {
+    margin-top: 20px;
+    width: 150px;
+    height: 45px;
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff1515, #000000);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto;
+}
+
+.dataButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 21, 21, 0.5);
+}
+
+.dataButton:active {
+    transform: translateY(-2px);
+}
+
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.file-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px; /* Ensures uniform height for all cards */
+}
+
+.file-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.file-item p {
+    font-family: "Oxanium", sans-serif;
+    color: white;
+    margin: 5px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.decrypt-button {
+    font-family: "Oxanium", sans-serif;
+    background-color: #39a2db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.decrypt-button:hover {
+    background-color: #217dbb;
+    box-shadow: 0 5px 10px rgba(57, 162, 219, 0.5);
+}
+
+.no-files {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin-top: 20px;
+}
+
+.error-message {
+    color: #ff4c4c;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.loading {
+    color: white;
+}

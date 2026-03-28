@@ -1,0 +1,221 @@
+/* Modal Overlay */
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Container */
+.modalContainer {
+  position: relative;
+  width: 500px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: linear-gradient(145deg, #1e1e1e, #121212);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+  font-family: "Oxanium", sans-serif;
+}
+
+/* Modal Title */
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Address Input */
+.shareText {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.shareText input {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.shareText input:focus {
+  outline: none;
+  border-color: #39a2db;
+  box-shadow: 0 0 0 2px rgba(57, 162, 219, 0.3);
+}
+
+/* Dropdown Styling */
+.dropdown {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: #39a2db;
+  box-shadow: 0 0 0 2px rgba(57, 162, 219, 0.3);
+}
+
+.dropdown option {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Button Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding-top: 15px;
+  flex-wrap: wrap;
+}
+
+.footer button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer button:not(#cancelBtn) {
+  background: linear-gradient(45deg, #39a2db, #217dbb);
+  color: white;
+  box-shadow: 0 4px 15px rgba(57, 162, 219, 0.4);
+}
+
+.footer button:not(#cancelBtn):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(57, 162, 219, 0.6);
+}
+
+#cancelBtn {
+  background: linear-gradient(45deg, #ff1515, #a00000);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 21, 21, 0.4);
+}
+
+#cancelBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 21, 21, 0.6);
+}
+
+/* Access History Table */
+.historyTable {
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.historyTable h4 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #39a2db;
+  font-size: 1.2rem;
+}
+
+.historyTable p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.historyTable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.historyTable th,
+.historyTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.historyTable th {
+  background: rgba(57, 162, 219, 0.2);
+  color: #39a2db;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.historyTable tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.historyTable td {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modalContainer {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer button {
+    width: 100%;
+  }
+
+  .historyTable th,
+  .historyTable td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
