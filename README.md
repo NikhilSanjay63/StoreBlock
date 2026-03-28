@@ -63,8 +63,9 @@ In `client/.env` set:
 
 - `REACT_APP_PINATA_API_KEY` (Pinata API key)
 - `REACT_APP_PINATA_SECRET_API_KEY` (Pinata secret key)
+- `REACT_APP_VIRUSTOTAL_API_KEY` (VirusTotal API key)
 
-⚠️ Important: Do not commit these values to source control. Better: move Pinata key use to a backend proxy.
+⚠️ Important: Do not commit these values to source control. Better: move API key use to a backend proxy.
 
 ## Usage
 

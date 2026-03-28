@@ -5,6 +5,7 @@ import "./FileUpload.css";
 
 const pinataApiKey = process.env.REACT_APP_PINATA_API_KEY;
 const pinataSecretApiKey = process.env.REACT_APP_PINATA_SECRET_API_KEY;
+const virusTotalApiKey = process.env.REACT_APP_VIRUSTOTAL_API_KEY;
 
 const FileUpload = ({ contract, account }) => {
   const [fileState, setFileState] = useState({
@@ -93,7 +94,7 @@ const FileUpload = ({ contract, account }) => {
         formData,
         {
           headers: {
-            "x-apikey": "6ea577626d2f39661fb489d9a12af0c7e2cee0198c6ea102aadea4fc3ee807fd",
+            "x-apikey": virusTotalApiKey,
             "Content-Type": "multipart/form-data",
           },
           timeout: 150000,
@@ -110,7 +111,7 @@ const FileUpload = ({ contract, account }) => {
           `https://www.virustotal.com/api/v3/analyses/${analysisId}`,
           {
             headers: {
-              "x-apikey": "6ea577626d2f39661fb489d9a12af0c7e2cee0198c6ea102aadea4fc3ee807fd",
+              "x-apikey": virusTotalApiKey,
             },
             timeout: 100000,
           }
